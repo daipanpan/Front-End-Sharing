@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    html, body{
+        padding: 0;
+        margin: 0;
+    }
+    .content{
+
+
+
+        
+        width: 600px;
+        height: 30px;
+        display: flex;
+    }
+    p{
+        height: 100%;
+        margin: 0;
+    }
+    /* 
+    flex布局中：子元素的flex参数有三个属性值，分别是flex-grow、flex-shrink、flex-basis。
+    第一个参数定义了剩余的空间中各个元素按照比例得到多少份额的多余空间。
+        也就是说：当项目中的子项宽度明确，则剩余空间将按比例分配。
+    flex-basis：定义了在分配多余空间之前，项目占据的主轴空间
+    */
+    .p-1{
+        background: red;
+        flex: 1 1 50px;
+    }
+    .p-2{
+        background: black;
+        flex: 1 1 100px;
+    }
+    .p-3{
+        background: yellow;
+        flex: 1 1 150px;
+    }
+    
+    /* 
+    多行文字显示主要常见的方案：使用table-cell结合vertical-align:middle。
+    但是table-cell会使overflow失效，解决方案是内层元素在嵌套一层div，利用div去处理overflow的情况
+    */
+    .multi-rows-words{
+        display: table-cell;
+        vertical-align: middle;
+        height: 100px;
+        width: 300px;
+        background: lightcoral;
+    }
+    .rows-wrapper{
+        max-height: 100px;
+        overflow: auto;
+    }
+</style>
+<body>
+    <!-- flex布局 -->
+    <!-- <div class="content">
+        <p class="p-1"></p>
+        <p class="p-2"></p>
+        <p class="p-3"></p>
+    </div> -->
+
+    <!-- 多字多行显示 -->
+    <!-- 方案一 -->
+    <!-- <div class="multi-rows-words">
+        <div class="rows-wrapper">
+            <span>this is mike.</span>
+            <span>this is mike.</span>
+            <span>this is mike.</span>
+        </div>
+    </div> -->
+    <!-- 方案二 -->
+    <!-- <div style="width: 100px;height: 150px;line-height: 150px;background: yellowgreen">
+        <span style="display:inline-block;line-height: normal">vxzmc dlhf sahlk sdfh</span>
+    </div> -->
+
+
+
+    <!-- 图片按自身比例等比缩放 -->
+    <div style="position: relative;width:100%;padding-top:56.2%;background: #c3e6c2;">
+        <img style="
+            max-width:100%;
+            max-height:100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;" 
+            src="http://oc24816dq.bkt.clouddn.com/IMG_20140224_122208.jpg" alt="">
+            <!-- src="http://oc24816dq.bkt.clouddn.com/20090622131631-85311624%5B1%5D.bmp" alt=""> -->1
+    </div>
+
+    <!-- sticky footer的一种实现方案 -->
+    <!-- <div style="position: absolute;top:0;bottom: 100px;left:0;right:0;background: #0808084a">
+        <div style="width: 100%;height: 400px;background: plum;"></div>
+        <div style="width: 100%;height: 400px;background: lawngreen;"></div>
+        <div style="width: 100%;height: 400px;background: plum;"></div>
+    </div>
+    <footer style="position: fixed;width:100%;height:100px;bottom: 0px;background: red;"></footer> -->
+
+
+    <!-- max-width和max-height的应用场景 -->
+    <!-- 
+        1.媒体查询经常用到
+        2.图片按自身比例缩放
+        3.em rem 
+
+     -->
+
+
+</body>
+</html>
