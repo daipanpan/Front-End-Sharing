@@ -27,7 +27,7 @@
     ps = push\
     pl = pull\
     sh = show\
-    tr = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit\
+    tr = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 2.Git常用指令：\
 git status \
@@ -40,41 +40,40 @@ git li\
 git tr\
 git sh commidID 查看某次提交的修改内容\
 git remote -v \
-cat 文件名\
+cat 文件名
 
 git branch new-branch  创建新分支\
 git co 分支名\
 git co -b  new-branch\
 git co -b new-branch origin/remote-branch\
 git br -d/-D branch\
-git push origin  :remote-branch   —删除某个远程分支\
+git push origin  :remote-branch   —删除某个远程分支
 
 撤销\
 git co .     —撤销所有的小改\
 git co 具体的文件   ——撤销对该文件在工作区的修改\
 从暂存区撤销到工作区\
-git reset —hard 版本号 —— 回滚到上一个版本或具体的某一个版本\
-
+git reset —hard 版本号 —— 回滚到上一个版本或具体的某一个版本
 
 
 临时存储
 git stash \
 git stash pop\
-git stash list\
+git stash list
 
 
 合并(后面的参数)\
 git merge\
 不怎么常用但是很重要\
 git cherry-pick  commitID    ——表示当前分支合并某个具体的提交，并会生成新的提交id。\
-应用场景：\
+应用场景：
 
 ![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/image/cherry-pick.png)
 
 打tag\
 git tag   —-查看所有tag\
 git tag tagName   ——基于最新提交创建tag\
-git tag -d tagName    ——删除tag \
+git tag -d tagName    ——删除tag 
 
 提交暂存区、本地仓库、远程仓库\
 ![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/image/git-repository.png)
@@ -82,17 +81,17 @@ git tag -d tagName    ——删除tag \
 Add区别于联系\
 git add -A  \
 git add -u \
-git add .\
+git add .
 
 git pull origin remote-branch\
-=git fetch + git merge origin/remote-branch\
+=git fetch + git merge origin/remote-branch
 
-git push origin remote-branch  (当该远程分支在远程仓库不存在时，该命令就直接新建该远程分支)\
+git push origin remote-branch  (当该远程分支在远程仓库不存在时，该命令就直接新建该远程分支)
 
 git push origin local-branch:remote-branch\
-git pull origin remote-branch:local-branch\
+git pull origin remote-branch:local-branch
 
-[技术|25个 Git 进阶技巧](https://linux.cn/article-5418-shareweibo.html)\
+[技术|25个 Git 进阶技巧](https://linux.cn/article-5418-shareweibo.html)
 
 
 问题：\
@@ -100,9 +99,9 @@ git pull origin remote-branch:local-branch\
 使用回滚可解决，但是回滚是否会影响到git stash的东西呢？\
 2. git rebase \
 3. git merge 是否后面跟commitid？试一下\
-![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/image/git-experience.png)\
+![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/image/git-experience.png)
 
-1.github origin和upstream的区别\
+1.github origin和upstream的区别
 ![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/image/upstream.png)
 
 Fork后的git地址后加上自己用户名，克隆下来后r远程仓库也是自己github上的仓库
