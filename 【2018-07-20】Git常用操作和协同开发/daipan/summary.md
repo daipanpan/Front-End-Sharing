@@ -1,6 +1,6 @@
 # 2.0 分享主题：Git常用操作和协同开发
 1.配置alias
-	g = git
+    g = git
     st = status
     re = remote -v
     ci = commit
