@@ -1,4 +1,4 @@
-[百度脑图](http://naotu.baidu.com/file/f5d606940e8add32a7b3804ea4c56ea9?token=2a41bd7c95854a12)
+![image](https://github.com/daipanpan/Front-End-Sharing/blob/sharing/%E3%80%902018-07-20%E3%80%91Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/daipan/git%E6%93%8D%E4%BD%9C%E6%80%BB%E7%BB%93.png)
 
 # 2.0 分享主题：Git常用操作和协同开发
 1.配置alias\
